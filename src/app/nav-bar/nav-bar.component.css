@@ -1,0 +1,16 @@
+.home-button {
+    padding-left: 0 14px;
+  }
+
+  .mat-display-1{
+    margin-left: 20px;
+  }
+
+  .example-spacer {
+    flex: 1 1 auto;
+  }
+
+.navbar-item{
+    font-weight: 100;
+    padding: 0 14px;
+}

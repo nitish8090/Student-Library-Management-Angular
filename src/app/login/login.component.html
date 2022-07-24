@@ -1,0 +1,98 @@
+<div class="login-page">
+    <mat-card class="login-card">
+        <h2>Login</h2>
+        <mat-tab-group mat-align-tabs="start">
+            <mat-tab label="Student">
+                <form [formGroup]="loginForm" class="login-form">
+                    <br>
+                    <mat-form-field class="input-fields" appearance="fill">
+                        <mat-label>Username</mat-label>
+                        <input formControlName="username" matInput placeholder="Ex. pat@example.com">
+                        <mat-error>
+                            Email is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+                    <br>
+
+                    <mat-form-field class="input-fields" appearance="fill">
+                        <mat-label>Password</mat-label>
+                        <input formControlName="password" matInput [type]="hide ? 'password' : 'text'">
+                        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                            [attr.aria-pressed]="hide">
+                            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                        </button>
+                    </mat-form-field>
+
+                    <br>
+                    <!-- <div class="button-container"> -->
+                        <button mat-raised-button type="submit" color="primary" (click)="login('StudentLogin')">Login</button>
+                    <!-- </div> -->
+
+                    <p>New user? <button mat-button>Click here to register.</button></p>
+                </form>
+
+
+            </mat-tab>
+            <mat-tab label="Librarian">
+                <form class="login-form">
+                    <br>
+                    <mat-form-field class="input-fields" appearance="fill">
+                        <mat-label>Username</mat-label>
+                        <input matInput placeholder="Ex. pat@example.com">
+                        <mat-error>
+                            Email is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+                    <br>
+
+                    <mat-form-field class="input-fields" appearance="fill">
+                        <mat-label>Password</mat-label>
+                        <input matInput [type]="hide ? 'password' : 'text'">
+                        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                            [attr.aria-pressed]="hide">
+                            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                        </button>
+                    </mat-form-field>
+
+                    <br>
+                    <div class="button-container">
+                        <button mat-raised-button color="primary">Login</button>
+                    </div>
+
+                    <p>New user? <button mat-button>Click here to register.</button></p>
+                </form>
+            </mat-tab>
+            <mat-tab label="Admin">
+                <form [formGroup]="loginForm" class="login-form">
+                    <br>
+                    <mat-form-field class="input-fields" appearance="fill">
+                        <mat-label>Username</mat-label>
+                        <input formControlName="username" matInput placeholder="Ex. pat@example.com">
+                        <mat-error>
+                            Email is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+                    <br>
+
+                    <mat-form-field class="input-fields" appearance="fill">
+                        <mat-label>Password</mat-label>
+                        <input formControlName="password" matInput [type]="hide ? 'password' : 'text'">
+                        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                            [attr.aria-pressed]="hide">
+                            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                        </button>
+                    </mat-form-field>
+
+                    <br>
+                    <div class="button-container">
+                        <button mat-raised-button color="primary" (click)="login('AdminLogin')">Login</button>
+                    </div>
+
+                    <p>New user? <button mat-button>Click here to register.</button></p>
+                </form>
+            </mat-tab>
+        </mat-tab-group>
+    </mat-card>
+
+
+</div>

@@ -7,4 +7,17 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'StudentLIbraryManagement';
+
+  public loginValid = true;
+  public username = '';
+  public password = '';
+  
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
+  public onSubmit(): void {
+    this.loginValid = true;
+  }
 }
